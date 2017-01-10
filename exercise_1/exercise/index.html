@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="app/app.css">
+  <title>Simple Controller Testing</title>
+  <script src="app/angular.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/calc.controller.js"></script>
+</head>
+<body ng-app="app">
+  <div ng-controller="calcController as vm">
+    <h1>Supreme Maths Calculator App</h1>
+    <div>
+      <input ng-model="vm.number1" placeholder="first number" type="number">
+      <input ng-model="vm.number2" placeholder="second number" type="number">
+    </div>
+    <p>{{vm.number1}} + {{vm.number2}} = {{vm.add(vm.number1, vm.number2)}}</p>
+    <p>{{vm.number1}} - {{vm.number2}} = {{vm.sub(vm.number1, vm.number2)}}</p>
+    <p>{{vm.number1}} / {{vm.number2}} = {{vm.div(vm.number1, vm.number2)}}</p>
+  </div>
+</body>
+</html>
